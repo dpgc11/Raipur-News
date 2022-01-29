@@ -1,6 +1,17 @@
 var app = angular.module('raipurNews', []);
 
-app.controller('MainCtrl', ['$scope', function($scope){
+
+app.factory('posts', [function() {
+	// service body
+	var o = {
+		posts: []
+	};
+	return o;
+}])
+
+app.controller('MainCtrl', ['$scope','posts', function($scope, posts){
+	$scope.posts = posts.posts;
+
 	$scope.test = 'Hello World!';
 
 	$scope.posts = [ 
