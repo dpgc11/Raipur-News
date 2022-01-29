@@ -1,4 +1,4 @@
-var app = angular.module('raipurNews', []);
+var app = angular.module('raipurNews', ['ui.router']);
 
 
 app.factory('posts', [function() {
